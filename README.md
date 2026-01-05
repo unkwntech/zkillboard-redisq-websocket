@@ -8,6 +8,8 @@ A simple websocket relay for the zKillboard [RedisQ](https://github.com/zKillboa
 * Clone the repository `git clone https://github.com/unkwntech/zkillboard-redisq-websocket.git`
 * Change to the new directory `cd zkillboard-redisq-websocket`
 * Install prerequisites `npm i`
+* Clone SAMPLE.env to .env `cp SAMPLE.env .env`
+* Edit .env, add a queue id.
 * Build the project `tsc -b`
 * Run the websocket server `node dist/main.js`
 

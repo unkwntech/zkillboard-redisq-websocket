@@ -10,6 +10,13 @@ export default class ZKill_RedisQ {
                 }
             )
             .then((res) => res.data)
+            .catch((e) => {
+                //Suppress connection timeout
+                if (e.code === "ECONNABORTED") {
+                    return null;
+                }
+                throw e;
+            })
             .catch(console.error);
     }
 }
